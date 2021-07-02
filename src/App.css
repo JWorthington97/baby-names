@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.boy {
+  background-color: #89cff0;
+}
+
+.girl {
+  background-color: #f4c2c2
+}
