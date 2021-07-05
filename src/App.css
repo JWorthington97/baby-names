@@ -42,5 +42,10 @@
 }
 
 .girl {
-  background-color: #f4c2c2
+  background-color: #f4c2c2;
+}
+
+.search {
+  width: 100%;
+  text-align: center;
 }

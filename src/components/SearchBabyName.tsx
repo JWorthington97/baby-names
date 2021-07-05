@@ -1,9 +1,16 @@
 interface SearchBabyNameProps {
-    search: string,
-    setSearch(search: string): void
+  search: string;
+  setSearch(search: string): void;
 }
 
-function SearchBabyName({search, setSearch}: SearchBabyNameProps): JSX.Element {
-    return <input value={search} onChange={(event) => setSearch(event?.target.value)}/>
+function SearchBabyName({
+  search,
+  setSearch,
+}: SearchBabyNameProps): JSX.Element {
+  return (
+    <div className="search">
+        <input value={search} onChange={(event) => setSearch(event.target.value)} />
+    </div>
+  );
 }
-export default SearchBabyName
+export default SearchBabyName;
