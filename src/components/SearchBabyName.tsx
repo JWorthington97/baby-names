@@ -8,8 +8,8 @@ function SearchBabyName({
   setSearch,
 }: SearchBabyNameProps): JSX.Element {
   return (
-      <div className="search">
-    <input value={search} onChange={(event) => setSearch(event.target.value)} />
+    <div className="search">
+        <input value={search} onChange={(event) => setSearch(event.target.value)} />
     </div>
   );
 }
