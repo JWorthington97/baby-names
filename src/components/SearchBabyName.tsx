@@ -7,7 +7,7 @@ function SearchBabyName({
 }: SearchBabyNameProps): JSX.Element {
   return (
     <div className="search">
-        <input type="search" value={search} onChange={(event) => setSearch(event.target.value)} />
+        <input type="search" placeholder="Search for a name..." value={search} onChange={(event) => setSearch(event.target.value)} />
         <div />
         <button className="all" onClick={() => setFilter("")}>All</button>
         <button className="boy" onClick={() => setFilter("m")}>Boys</button>

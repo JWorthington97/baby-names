@@ -31,7 +31,7 @@ function GetBabyNames({
         </button>
         ))}
       </div>
-
+      <hr />
       <div className="names">
       {allBabyNames.map((baby) =>
         baby.sex === "m" ? (

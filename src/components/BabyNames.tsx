@@ -22,6 +22,7 @@ function BabyNames(): JSX.Element {
   return (
     <>
       <SearchBabyName search={search} setSearch={setSearch} setFilter={setFilter} />
+      <hr />
       <GetBabyNames
         allBabyNames={mainBodyBabyNames}
         chosenNames={chosenNames}
