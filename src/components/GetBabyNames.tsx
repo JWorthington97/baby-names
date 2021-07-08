@@ -7,36 +7,48 @@ function GetBabyNames({
 }: BabyNamesProps): JSX.Element {
   return (
     <>
-      <div>
+      <div className="names">
         Chosen Names:{" "}
         {chosenNames.map((baby) => (
+          baby.sex === "m" ?
           <button
+            className="boy"
+            key={baby.name}
             onClick={() =>
               setChosenNames([...chosenNames].filter((x) => x !== baby))
             }
           >
-            {baby}
-          </button>
+            {baby.name}
+          </button> :
+          <button
+          className="girl"
+          key={baby.name}
+          onClick={() =>
+            setChosenNames([...chosenNames].filter((x) => x !== baby))
+          }
+        >
+          {baby.name}
+        </button>
         ))}
       </div>
 
       <div className="names">
-      {allBabyNames.map((obj) =>
-        obj.sex === "m" ? (
+      {allBabyNames.map((baby) =>
+        baby.sex === "m" ? (
           <button
             className="boy"
-            key={obj.name}
-            onClick={() => setChosenNames([...chosenNames, obj.name])}
+            key={baby.name}
+            onClick={() => setChosenNames([...chosenNames, baby].sort((a, b) => (a.name > b.name) ? 1 : -1))}
           >
-            {obj.name}
+            {baby.name}
           </button>
         ) : (
           <button
             className="girl"
-            key={obj.name}
-            onClick={() => setChosenNames([...chosenNames, obj.name])}
+            key={baby.name}
+            onClick={() => setChosenNames([...chosenNames, baby].sort((a, b) => (a.name > b.name) ? 1 : -1))}
           >
-            {obj.name}
+            {baby.name}
           </button>
           
         )
