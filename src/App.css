@@ -37,11 +37,20 @@
   }
 }
 
-.boy {
-  background-color: #89cff0;
+.names button {
+  padding: 10px;
+  margin: 2px;
+  border-radius: 10px;
+  border: 0;
+  
 }
 
-.girl {
+.names .boy {
+  background-color: #89cff0;
+
+}
+
+.names .girl {
   background-color: #f4c2c2;
 }
 

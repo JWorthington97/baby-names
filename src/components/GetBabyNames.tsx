@@ -1,14 +1,4 @@
-interface BabyName {
-  id: number;
-  name: string;
-  sex: string;
-}
-
-interface BabyNamesProps {
-  allBabyNames: BabyName[];
-  chosenNames: string[];
-  setChosenNames(names: string[]): void;
-}
+import { BabyNamesProps } from '../utils/Types'
 
 function GetBabyNames({
   allBabyNames,
@@ -30,6 +20,7 @@ function GetBabyNames({
         ))}
       </div>
 
+      <div className="names">
       {allBabyNames.map((obj) =>
         obj.sex === "m" ? (
           <button
@@ -47,8 +38,10 @@ function GetBabyNames({
           >
             {obj.name}
           </button>
+          
         )
       )}
+      </div>
     </>
   );
 }

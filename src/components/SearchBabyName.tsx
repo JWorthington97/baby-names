@@ -1,7 +1,4 @@
-interface SearchBabyNameProps {
-  search: string;
-  setSearch(search: string): void;
-}
+import { SearchBabyNameProps } from '../utils/Types'
 
 function SearchBabyName({
   search,
@@ -9,7 +6,7 @@ function SearchBabyName({
 }: SearchBabyNameProps): JSX.Element {
   return (
     <div className="search">
-        <input value={search} onChange={(event) => setSearch(event.target.value)} />
+        <input type="search" value={search} onChange={(event) => setSearch(event.target.value)} />
     </div>
   );
 }

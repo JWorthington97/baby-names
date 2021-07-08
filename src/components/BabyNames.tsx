@@ -3,13 +3,15 @@ import babyNames from "../baby-names.json";
 import GetBabyNames from ".//GetBabyNames";
 import SearchBabyName from "./SearchBabyName";
 
+
 function BabyNames(): JSX.Element {
   const [chosenNames, setChosenNames] = useState<string[]>([]);
   const [search, setSearch] = useState("");
 
   const mainBodyBabyNames = babyNames
     .filter((obj) => obj.name.toLowerCase().includes(search.toLowerCase()))
-    .filter((obj) => !chosenNames.includes(obj.name));
+    .filter((obj) => !chosenNames.includes(obj.name))
+    .sort((a, b) => (a.name > b.name) ? 1 : -1);
   // make case INsensitive
 
   return (
