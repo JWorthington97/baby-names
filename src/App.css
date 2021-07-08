@@ -37,15 +37,48 @@
   }
 }
 
-.boy {
-  background-color: #89cff0;
+button {
+  padding: 10px;
+  margin: 2px;
+  border-radius: 10px;
+  border: 0;
 }
 
-.girl {
+.names .boy {
+  background-color: #89cff0;
+
+}
+
+.names .girl {
   background-color: #f4c2c2;
 }
 
 .search {
   width: 100%;
   text-align: center;
+  margin-top: 10px;
+}
+
+.search .boy{
+  background-color: #89cff0;
+}
+
+.search .boy:focus {
+  background-color: #3faee2;
+}
+
+.search .girl{
+  background-color: #f4c2c2;
+}
+
+.search .girl:focus {
+  background-color: #e28888;
+}
+
+.search .all{
+  background-color: cornsilk;
+}
+
+.search .all:focus {
+  background-color: rgb(230, 218, 170);
 }
